@@ -1,57 +1,41 @@
 import java.util.Scanner;
-import java.util.Random;
 
 public class TextBasedRPG {
     public static Scanner scan = new Scanner(System.in);
-    public static Random random = new Random();
-    //determines the amount of items you can carry
-    public static int maxItems = 5;
-    //this is your actual inventory
-    public static String[] inventory = new String[maxItems];
 
-
-
-
-    public static void main(String[] args)
-    {
-        System.out.println("Welcome to our RPG game!");
+    public static void main(String[] args) {
         System.out.println("Press ENTER to begin...");
         scan.nextLine();
         intro();
     }
 
-    public static void intro()
-    {
-        typewriter("Our story begins here...");
+    public static void intro() {
+        System.out.print("Enter your name: ");
+        String name = scan.nextLine();
 
-        //use typewriter( ) to print out the intro setup for your story.
+        typewriter("The story begins here...");
+        typewriter("1958, Australia. The government is failing its people. Corrupt politicians and billionaires tighten their grip on society.");
+        typewriter("You, " + name + ", are a high-ranking detective. You've seen the corruption firsthand and know justice won’t come through the system.");
+        typewriter("You decide to take matters into your own hands.");
 
-        //1. tell us the lore of your world
-        //2. tell us who our character is
-        //3. let us input in a name for our character
-        //4. give us a quest
-        //5. it should end with a choice/decision
+        firstChoice();
+    }
 
+    public static void firstChoice() {
+        System.out.print("Introduce yourself to the CEO? (yes/no): ");
+        String choice = scan.nextLine();
+        if (choice.equals("yes")) {
+            typewriter("You introduce yourself, hoping to get closer to uncovering corruption.");
+        } else {
+            typewriter("You stay in the shadows, gathering more information first.");
+        }
     }
 
     public static void typewriter(String text) {
-        int i;
-        for (i = 0; i < text.length(); i++) {
-            System.out.printf("%c", text.charAt(i));
-            try {
-                Thread.sleep(75);//0.5s pause between characters
-            } catch (InterruptedException ex) {
-                Thread.currentThread().interrupt();
-            }
+        for (char c : text.toCharArray()) {
+            System.out.print(c);
+            try { Thread.sleep(10); } catch (InterruptedException ex) {}
         }
-        System.out.println("");
+        System.out.println();
     }
-
-
-
-
-
-
-
-    //file ends on next line
 }
