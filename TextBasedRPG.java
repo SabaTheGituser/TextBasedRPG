@@ -42,8 +42,8 @@ public class TextBasedRPG {
             typewriter("CEO: And I would love to see YOU at our yearly honey convection this Thursday, it always gets very crowded.");
             typewriter("You: I’ll be sure to find the time.");
         } else {
-            typewriter("You go into your office and look over recent cases");
-            typewriter("While looking through your computer, you get a unnamed file sent to you.");
+            typewriter("You go into your office and look over recent cases.");
+            typewriter("While looking through your computer, you get an unnamed file sent to you.");
             secondChoice();
         }
     }
@@ -53,7 +53,11 @@ public class TextBasedRPG {
             System.out.print("Do you open it? (yes/no): ");
             String choice = scan.nextLine();
             if (choice.equals("yes")) {
-                //something next.
+                typewriter("Your computer explodes and you die.");
+            } else {
+                typewriter("You feel suspicious of the file so you decide to investigate more and learn that it would’ve exploded the computer if opened,");
+                typewriter("you must find out who sent it.");
+
             }
 
     }
