@@ -104,7 +104,7 @@ public class TextBasedRPG {
             typewriter("Thursday:");
             typewriter("");
             typewriter("");
-            typewriter("At the convection your watching Danny Wax give a speech, but you also notice the trailer that he came out of is cracked open.");
+            typewriter("At the convention you are watching Danny Wax give a speech, but you also notice the trailer that he came out of is cracked open.");
             fifthChoice();
         }
 
@@ -114,17 +114,44 @@ public class TextBasedRPG {
 
 
     public static void fifthChoice() {
-        System.out.print("");
+        System.out.print("Do you sneak inside? (yes/no): ");
         String choice = scan.nextLine();
         if (choice.equals("yes")) {
-            typewriter("");
+            sixthChoice();
         } else {
-
+            typewriter("You buy a giant Jar of organic honey and take it home to give to your pet squirrel.");
+            typewriter("Mission skipped");
 
         }
 
     }
 
+    public static void sixthChoice() {
+        if (inventory[0].equals ("Revolver")) {
+            typewriter("You go in and see some filing cabinets and a desk in the middle of the room. ");
+            typewriter("While getting closer to the desk you get hit on the back of the head. ");
+            typewriter("You turn around and see a beefy man getting ready to hit you again.");
+            seventhChoice();
+        } else {
+            typewriter("You go in and see some filing cabinets and a desk in the middle of the room. ");
+            typewriter("While getting closer to the desk you get hit on the back of the head.");
+            typewriter("You turn around and he hits you again and knocks you out...");
+        }
+
+    }
+
+    public static void seventhChoice() {
+        System.out.print("Do you pull out you gun and shoot him? (yes/no): ");
+        String choice = scan.nextLine();
+        if (choice.equals("yes")) {
+            sixthChoice();
+        } else {
+            typewriter("You buy a giant Jar of organic honey and take it home to give to your pet squirrel.");
+            typewriter("Mission skipped");
+
+        }
+
+    }
 
 
 
