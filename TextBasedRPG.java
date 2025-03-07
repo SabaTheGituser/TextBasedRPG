@@ -64,6 +64,7 @@ public class TextBasedRPG {
             } else {
                 typewriter("You feel suspicious of the file so you decide to investigate more and learn that it would’ve exploded the computer if opened,");
                 typewriter("you must find out who sent it.");
+                typewriter("To be continued...");
 
             }
 
@@ -140,6 +141,7 @@ public class TextBasedRPG {
             typewriter("You go in and see some filing cabinets and a desk in the middle of the room. ");
             typewriter("While getting closer to the desk you get hit on the back of the head.");
             typewriter("You turn around and he hits you again and knocks you out...");
+            typewriter("To be continued...");
         }
 
     }
@@ -153,6 +155,7 @@ public class TextBasedRPG {
         } else {
             typewriter("You wake up in a dark dimly lit room, tied up and confused you try to find a way to cut your binds,");
             typewriter("before you can further examine Danny Wax walks in the room, holding a full glass of red wine.");
+            typewriter("To be continued...");
         }
 
     }
@@ -165,9 +168,14 @@ public class TextBasedRPG {
 
         {
             typewriter("You hit and the Beefy Man dropped, you sit there for a awhile looking at him,");
-            typewriter("you know you must leave when you hear people screaming outside.");
+            typewriter("you know you must leave when you hear people screaming outside so you grab a file you find on the desk and leave out a window.");
             System.out.println("You have 1 bullet remaining.");
             inventory[1] = null;
+            typewriter("-----------------------------------------------------------------------------------------------------------------------------------------------------");
+            typewriter("Jumping out the window you’re in the back area of the trailers you see a pair of kids looking at you,");
+            typewriter("you tell yourself that these kids could be loose ends");
+            typewriter("the only thing you have for them is $20 or a Bullet");
+            eighthChoice();
         }
         else
         {
@@ -180,6 +188,50 @@ public class TextBasedRPG {
 
     }
 
+    public static void eighthChoice() {
+        typewriter("What do you give them? $20 or Bullet");
+        String choice = scan.nextLine();
+        if (choice.equals("20$")) {
+            typewriter("You gave them both $10 and told them to please not say anything,");
+            typewriter("they look at the money for awhile before smiling at you and running off");
+            situationOne();
+        } else {
+            typewriter("You give the Kid the Bullet. His friend starts screaming for help,");
+            typewriter("you look for a way out but before you can locate one your tackled and put in custody,");
+            typewriter("after being tired and found guilty you find yourself in death row and feeling scared.");
+            ninthChoice();
+
+        }
+
+    }
+
+
+    public static void ninthChoice() {
+        typewriter("Do you cry? (yes/no): ");
+        String choice = scan.nextLine();
+        if (choice.equals("yes")) {
+            typewriter("You cried for the last time.");
+            typewriter("You were later put in the electric chair and died");
+            typewriter("You died feeling sorry for yourself.");
+            typewriter("Mission Failed.");
+        } else {
+            typewriter("You held in your emotions like you did your whole life.");
+            typewriter("You were later put in the electric chair and died.");
+            typewriter("You died a Monster.");
+            typewriter("Mission Failed.");
+
+        }
+
+    }
+
+
+    public static void situationOne() {
+        typewriter("After getting home, , in this file you find out that BeezWax could’ve gotten a small group ");
+        typewriter("of the Bees and brought them here to breed and make honey, but it costs more to build and maintain that farm ");
+        typewriter("than to import the honey from a poor country, but also from this file you find what seems ");
+        typewriter("to be Barry Wax’s address, you must go.");
+        typewriter("To be continued...");
+    }
 
 
     public static void typewriter(String text) {
