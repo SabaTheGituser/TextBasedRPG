@@ -1,6 +1,8 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class TextBasedRPG {
+    static Random random = new Random();
     public static Scanner scan = new Scanner(System.in);
     public static String name;
     public static int maxItems = 5;
@@ -93,6 +95,8 @@ public class TextBasedRPG {
         if (choice.equals("yes")) {
             typewriter("You put the revolver in your belt, knowing you might need it later");
             inventory[0] = "Revolver";
+            inventory[1] = "bullet";
+            inventory[2] = "bullet2";
             System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------");
             typewriter("Thursday:");
             typewriter("");
@@ -114,7 +118,7 @@ public class TextBasedRPG {
 
 
     public static void fifthChoice() {
-        System.out.print("Do you sneak inside? (yes/no): ");
+        typewriter("Do you sneak inside? (yes/no): ");
         String choice = scan.nextLine();
         if (choice.equals("yes")) {
             sixthChoice();
@@ -141,15 +145,38 @@ public class TextBasedRPG {
     }
 
     public static void seventhChoice() {
-        System.out.print("Do you pull out you gun and shoot him? (yes/no): ");
+        typewriter("Do you pull out you gun and shoot him? (yes/no): ");
         String choice = scan.nextLine();
         if (choice.equals("yes")) {
-            sixthChoice();
+            typewriter("You pull out your gun, having no time to aim you just point and shoot");
+            luck();
         } else {
-            typewriter("You buy a giant Jar of organic honey and take it home to give to your pet squirrel.");
-            typewriter("Mission skipped");
-
+            typewriter("You wake up in a dark dimly lit room, tied up and confused you try to find a way to cut your binds,");
+            typewriter("before you can further examine Danny Wax walks in the room, holding a full glass of red wine.");
         }
+
+    }
+
+
+    public static void luck() {
+        int num = random.nextInt(0,11);
+
+        if (num > 5)
+
+        {
+            typewriter("You hit and the Beefy Man dropped, you sit there for a awhile looking at him,");
+            typewriter("you know you must leave when you hear people screaming outside.");
+            System.out.println("You have 1 bullet remaining.");
+            inventory[1] = null;
+        }
+        else
+        {
+            typewriter("You miss, but the shock of the noise shocked the Beefy Man, you take this chance to pistol whip him,");
+            typewriter(", he falls over and drops a radio. You pick it up.");
+            System.out.println("You have 1 bullet remaining.");
+            inventory[1] = null;
+        }
+
 
     }
 
