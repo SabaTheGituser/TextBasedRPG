@@ -62,10 +62,12 @@ public class TextBasedRPG {
                 typewriter("Your computer explodes and you die.");
                 System.out.println("Mission Failed.");
             } else {
-                typewriter("You feel suspicious of the file so you decide to investigate more and learn that it would’ve exploded the computer if opened,");
-                typewriter("you must find out who sent it.");
-                typewriter("To be continued...");
-
+                typewriter("You decide to investigate more and learn that it would’ve exploded the computer if opened,");
+                typewriter("after some looking you find that it was from a anonymous source,");
+                typewriter("looking around in the file you get a link to a active chat room, joining the room you see a number a names,");
+                typewriter("Danny Wax is the name that really pops up to you, you scroll up and read some despicable things,");
+                typewriter("in this chat room you read about a convention happening this Thursday ");
+                secondChoice();
             }
 
     }
@@ -147,7 +149,7 @@ public class TextBasedRPG {
     }
 
     public static void seventhChoice() {
-        typewriter("Do you pull out you gun and shoot him? (yes/no): ");
+        typewriter("Do you pull out your gun and shoot him? (yes/no): ");
         String choice = scan.nextLine();
         if (choice.equals("yes")) {
             typewriter("You pull out your gun, having no time to aim you just point and shoot");
@@ -191,7 +193,7 @@ public class TextBasedRPG {
     public static void eighthChoice() {
         typewriter("What do you give them? $20 or Bullet");
         String choice = scan.nextLine();
-        if (choice.equals("20$")) {
+        if (choice.equals("$20")) {
             typewriter("You gave them both $10 and told them to please not say anything,");
             typewriter("they look at the money for awhile before smiling at you and running off");
             situationOne();
@@ -229,7 +231,7 @@ public class TextBasedRPG {
         typewriter("After getting home, , in this file you find out that BeezWax could’ve gotten a small group ");
         typewriter("of the Bees and brought them here to breed and make honey, but it costs more to build and maintain that farm ");
         typewriter("than to import the honey from a poor country, but also from this file you find what seems ");
-        typewriter("to be Barry Wax’s address, you must go.");
+        typewriter("to be Danny Wax’s address, you must go.");
         typewriter("To be continued...");
     }
 
