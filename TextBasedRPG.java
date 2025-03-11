@@ -43,7 +43,7 @@ public class TextBasedRPG {
             typewriter("You: Well, what might your name be?");
             typewriter("CEO: Danny, Danny Wax.");
             typewriter("You: I see where the company name comes from now.");
-            typewriter("CEO: And I would love to see YOU at our yearly honey convection this Thursday, it always gets very crowded.");
+            typewriter("CEO: And I would love to see YOU at our yearly honey convention this Thursday, it always gets very crowded.");
             typewriter("You: I’ll be sure to find the time.");
             secondChoice();
 
@@ -77,7 +77,7 @@ public class TextBasedRPG {
         typewriter("Do you go? (yes/no): ");
         String choice = scan.nextLine();
         if (choice.equals("yes")) {
-            typewriter("You prepare for convection, looking through your desk you find an old revolver with two bullets left, sitting in the bottom cabinet.");
+            typewriter("You prepare for convention, looking through your desk you find an old revolver with two bullets left, sitting in the bottom cabinet.");
             fourthChoice();
         } else {
             typewriter("You forget about it and go get a doughnut and coffee, while getting your doughnut you drop your coffee, slip on it,");
@@ -104,7 +104,7 @@ public class TextBasedRPG {
             typewriter("Thursday:");
             typewriter("");
             typewriter("");
-            typewriter("At the convection your watching Danny Wax give a speech, but you also notice the trailer that he came out of is cracked open.");
+            typewriter("At the convention your watching Danny Wax give a speech, but you also notice the trailer that he came out of is cracked open.");
             fifthChoice();
         } else {
             System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------");
@@ -161,7 +161,7 @@ public class TextBasedRPG {
             typewriter("As he’s finishing, he drops his glass, he sighs and leaves the room.");
             typewriter("");
             typewriter("");
-            typewriter("You have a chance to kick some glass to gur leg and possibly cut the rope ");
+            typewriter("You have a chance to kick some glass to your leg and possibly cut the rope ");
             tenthChoice();
         }
 
@@ -186,10 +186,16 @@ public class TextBasedRPG {
         }
         else
         {
-            typewriter("You miss, but the shock of the noise shocked the Beefy Man, you take this chance to pistol whip him,");
-            typewriter(", he falls over and drops a radio. You pick it up.");
+            typewriter("You miss, but the shock of the noise shocked the Beefy Man,");
+            typewriter("you take this chance to pistol whip him, he falls over.");
+            typewriter("you know you must leave when you hear people screaming outside so you grab a file you find");
+            typewriter("on the desk and leave out a window, in this file you find out that BeezWax could’ve gotten a small group of");
+            typewriter("the Bees and brought them here to breed and make honey, but it costs more to build and maintain that");
+            typewriter("farm than to import the honey from a poor country,");
+            typewriter("but also from this file you find what seems to be Barry Wax’s address, you must go.");
             System.out.println("You have 1 bullet remaining.");
             inventory[1] = null;
+            situationOne();
         }
 
 
